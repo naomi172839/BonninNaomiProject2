@@ -4,7 +4,7 @@
  * Course: CMIS 242 6383
  * Project Name: Project 2 (Employee ATM
  * Filename: Account.java
- * Updated: 9/14/19, 6:58 PM
+ * Updated: 9/14/19, 7:25 PM
  * Description: This program creates a rudimentary ATM machine.
  */
 
@@ -16,7 +16,7 @@ class Account {
 
     private double balance;
     private final static double SERVICE_CHARGE = 1.50; //Default service charge
-    private static int withdraws = 1; //Starts at one because the check is performed before a withdraw has been performed
+    private static int withdraws = 0; //Starts at one because the check is performed before a withdraw has been performed
 
     //Constructor to create the account.  Requires a starting balance
     Account(double balance) {
