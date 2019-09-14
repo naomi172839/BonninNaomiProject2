@@ -6,7 +6,7 @@ public class Account {
     private static int withdraws = 1;
     private final static double SERVICE_CHARGE = 1.50;
 
-    public Account(double balance) {
+    Account(double balance) {
         this.balance = balance;
     }
 
@@ -26,12 +26,11 @@ public class Account {
         Account.withdraws = withdraws;
     }
 
-    public double deposit(double depositAmount) {
+    void deposit(double depositAmount) {
         this.setBalance(this.getBalance() + depositAmount);
-        return this.getBalance();
     }
 
-    public double withdraw(double withdrawAmount) throws InsufficientFunds {
+    void withdraw(double withdrawAmount) throws InsufficientFunds {
         if(Account.withdraws > 4 && this.getBalance() + SERVICE_CHARGE < withdrawAmount) {
             throw new InsufficientFunds(this);
         }else if(this.getBalance() < withdrawAmount) {
@@ -44,20 +43,18 @@ public class Account {
             }
             this.setWithdraws(this.getWithdraws()+1);
         }
-        return this.getBalance();
     }
 
     public double currentBalance() {
         return this.getBalance();
     }
 
-    public double transfer(Account receiving, double transferAmount) throws InsufficientFunds {
+    void transfer(Account receiving, double transferAmount) throws InsufficientFunds {
         if(this.getBalance() < transferAmount) {
             throw new InsufficientFunds(this);
         } else {
             receiving.deposit(transferAmount);
             this.setBalance(this.getBalance()-transferAmount);
         }
-        return this.getBalance();
     }
 }

@@ -2,9 +2,9 @@ package edu.bonnin;
 
 class InsufficientFunds extends Exception {
 
-    double balance;
+    private double balance;
 
-    public InsufficientFunds(Account a) {
+    InsufficientFunds(Account a) {
         balance = a.getBalance();
     }
 

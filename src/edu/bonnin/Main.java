@@ -145,10 +145,10 @@ public class Main {
 
     		if(e.getActionCommand().equals("Balance")) {
 				if (checking.isSelected()) {
-					JOptionPane.showMessageDialog(frame, String.valueOf(checkingAccount.getBalance()));
+					JOptionPane.showMessageDialog(frame, String.valueOf(checkingAccount.currentBalance()));
 				}
 				if (savings.isSelected()) {
-					JOptionPane.showMessageDialog(frame, String.valueOf(savingsAccount.getBalance()));
+					JOptionPane.showMessageDialog(frame, String.valueOf(savingsAccount.currentBalance()));
 				}
 			}
 
