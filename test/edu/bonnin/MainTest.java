@@ -4,7 +4,7 @@
  * Course: CMIS 242 6383
  * Project Name: Project 2 (Employee ATM
  * Filename: MainTest.java
- * Updated: 9/14/19, 7:25 PM
+ * Updated: 9/14/19, 7:43 PM
  * Description: This program creates a rudimentary ATM machine.
  */
 
@@ -20,4 +20,5 @@ class MainTest {
         String[] args = null;
         Main.main(args);
     }
+
 }
